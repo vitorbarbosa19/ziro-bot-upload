@@ -1,0 +1,17 @@
+{
+  "name": "ziro-bot-upload",
+  "version": "1.0.0",
+  "description": "Bulk upload images downloaded from Ziro's bot",
+  "main": "index.js",
+  "repository": "https://github.com/vitorbarbosa19/ziro-bot-upload",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": ["node", "cloudinary"],
+  "author": "Vitor Barbosa",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.9.1",
+    "dotenv": "^4.0.0"
+  }
+}
