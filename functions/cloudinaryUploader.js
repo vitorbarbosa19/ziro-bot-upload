@@ -1,7 +1,7 @@
-const cloudinaryUploader = (cloudinary) => {
+const cloudinaryUploader = (cloudinary, imagePath) => {
 	return new Promise( (resolve, reject) => {
 		try {
-			cloudinary.uploader.upload('images/luzia-fazzolli.jpg', (result) => {
+			cloudinary.uploader.upload(imagePath, (result) => {
 				if(result.url && result.tags) {
 					resolve({
 						status: 'success',
