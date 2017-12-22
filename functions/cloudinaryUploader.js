@@ -1,7 +1,6 @@
 const cloudinaryUploader = (cloudinary, imagePath) => {
 	return new Promise( (resolve, reject) => {
 		try {
-			const parseImageName = require('./parseImageName')
 			cloudinary.uploader.upload(`images/${imagePath}`, (result) => {
 				if(result.url && result.tags) {
 					resolve({
@@ -13,7 +12,7 @@ const cloudinaryUploader = (cloudinary, imagePath) => {
 				resolve(result)
 			},
 			{
-				tags: [parseImageName(imagePath)]
+				tags: imagePath.replace(/-[0-9]+.jpg/,'')
 			})
 		} catch (error) {
 			reject(error)
