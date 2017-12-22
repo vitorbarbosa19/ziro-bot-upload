@@ -1,7 +1,8 @@
 const cloudinaryUploader = (cloudinary, imagePath) => {
 	return new Promise( (resolve, reject) => {
 		try {
-			cloudinary.uploader.upload(imagePath, (result) => {
+			const parseImageName = require('./parseImageName')
+			cloudinary.uploader.upload(`images/${imagePath}`, (result) => {
 				if(result.url && result.tags) {
 					resolve({
 						status: 'success',
@@ -12,7 +13,7 @@ const cloudinaryUploader = (cloudinary, imagePath) => {
 				resolve(result)
 			},
 			{
-				tags: ['luzia fazzolli']
+				tags: [parseImageName(imagePath)]
 			})
 		} catch (error) {
 			reject(error)
