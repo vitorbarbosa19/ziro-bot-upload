@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/vitorbarbosa19/ziro-bot-upload",
   "scripts": {
-    "start": "node index"
+    "upload": "node index"
   },
   "keywords": ["node", "cloudinary"],
   "author": "Vitor Barbosa",

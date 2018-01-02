@@ -12,7 +12,7 @@ const cloudinaryUploader = (cloudinary, imagePath) => {
 				resolve(result)
 			},
 			{
-				tags: imagePath.replace(/-[0-9]+.jpg/,'')
+				tags: imagePath.replace(/-[0-9]+_?.jpg/,'')
 			})
 		} catch (error) {
 			reject(error)
